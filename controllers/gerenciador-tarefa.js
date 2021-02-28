@@ -24,9 +24,9 @@ function listarTarefas(req, res) {
   }
 
   // ordenacao
-  if (ordem && ordem.toUpperCase === 'ASC') {
+  if (ordem && ordem.toUpperCase() === 'ASC') {
     tarefasRetorno.sort((t1, t2) => (t1.nome.toLowerCase() > t2.nome.toLowerCase() ? 1 : -1))
-  } else if (ordem && ordem.toUpperCase === 'DESC') {
+  } else if (ordem && ordem.toUpperCase() === 'DESC') {
     tarefasRetorno.sort((t1, t2) => (t1.nome.toLowerCase() < t2.nome.toLowerCase() ? 1 : -1))
   }
 
