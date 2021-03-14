@@ -7,9 +7,7 @@ function finalizarCompra(req, res) {
 
 function obterCidadesPorEstado(req, res) {
   const siglaEstado = req.params['siglaEstado'].toUpperCase()
-  console.log(siglaEstado)
   const dadosEstado = cidadesEstados.estados.filter(estado => estado.sigla === siglaEstado)
-  console.log(dadosEstado)
   if (dadosEstado.length === 0) {
     res.status(404).json({ erro: `${siglaEstado} não um estado válido` })
   } else {
